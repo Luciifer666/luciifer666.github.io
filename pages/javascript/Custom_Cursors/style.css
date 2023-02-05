@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #4a77f4;
+}
+
+.container{
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 60em;
+    padding: 5em 2em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5em 2em;
+}
+
+.container button{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2em;
+    background-color: #4a77f4;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 0.8em;
+    text-transform: capitalize;
+    border-radius: 0.3em;
+}
+
+.pizza{
+    cursor: url("Images/pizza.png"), auto;
+}
+
+.wand{
+    cursor: url("Images/wand.png"), auto;
+}
+
+.lipstick{
+    cursor: url("Images/lipstick.png"), auto;
+}
+
+.feather{
+    cursor: url("Images/feather.png"), auto;
+}
+
+.sword{
+    cursor: url("Images/sword.png"), auto;
+}
+
+.rocket{
+    cursor: url("Images/rocket.png"), auto;
+}
+
