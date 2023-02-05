@@ -1,39 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Pixel Art Generator</title>
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="options">
-                <div class="opt-wrapper">
-                    <div class="slider">
-                        <label for="width-range">Grid Width</label>
-                        <input type="range" id="width-range" min="1" max="35">
-                        <span id="width-value">00</span>
-                    </div>
-                    <div class="slider">
-                        <label for="height-range">Grid Height</label>
-                        <input type="range" id="height-range" min="1" max="35">
-                        <span id="height-value">00</span>
-                    </div>
-                </div>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
 
-                <div class="opt-wrapper">
-                    <button id="submit-grid">Create Grid</button>
-                    <button id="clear-grid">Clear Grid</button>
-                    <input type="color" id="color-input">
-                    <button id="erase-btn">Erase</button>
-                    <button id="paint-btn">Paint</button>
-                </div>
-            </div>
-            <div class="container"></div>
-        </div>
+body{
+    background-color: #43a047;
+}
 
-        <script src="script.js"></script>
-    </body>
-</html>
+.wrapper{
+    background-color: #fff;
+    width: 80vmin;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+label{
+    display: block;
+}
+
+span{
+    position: relative;
+    font-size: 22px;
+    bottom: -1px;
+}
+
+.opt-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+button{
+    background-color: #43a047;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+}
+
+input[type="color"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 70px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch{
+    border-radius: 8px;
+    border: 4px solid #000;
+}
+input[type="color"]::-moz-color-swatch{
+    border-radius: 8px;
+    border: 4px solid #000;
+}
+
+.gridCol{
+    height: 1em;
+    width: 1em;
+    border: 1px solid #ddd;
+}
+
+.gridRow{
+    display: flex;
+}
+
+@media only screen and (max-width: 768px){
+    .gridCol{
+        height: 0.8em;
+        width: 0.8em;
+    }
+}
