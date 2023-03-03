@@ -30,7 +30,7 @@ setInterval(() => {
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
 
-    let am = h >= 12 ? "PM" : AM
+    let am = h >= 12 ? "PM" : "AM"
 
     if(h > 12) {
         h = h-12;
