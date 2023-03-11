@@ -2,6 +2,8 @@ const playBoard = document.querySelector(".play-board");
 const scoreElement = document.querySelector(".score");
 const highScoreElement = document.querySelector(".high-score");
 const controls = document.querySelectorAll(".controls i");
+const controls_param = document.getElementById("commands");
+//const zoomControls = document.getElementById("controls");
 
 let gameOver = false;
 let foodX, foodY;
@@ -53,6 +55,35 @@ controls.forEach(button => {
     });
 });
 
+function detectMobile() {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
+
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+};
+
+function mobileChecker() {
+    if(detectMobile()) {
+        console.log("is mobile");
+        controls_param.style.display = "block";
+        
+        for(let i = 0; i < controls.length; i++) {
+            controls[i].style.width = "calc(96.6% / 4)"
+        };
+    } else {
+        console.log("it's not mobile");
+    };
+};
+
 const initGame = () => {
     if(gameOver) return handleGameOver();
     let html = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
@@ -99,6 +130,7 @@ const initGame = () => {
     playBoard.innerHTML = html;
 };
 
+mobileChecker();
 updateFoodPosition();
 setIntervalId = setInterval(initGame, 100);
 document.addEventListener("keyup", changeDirection);

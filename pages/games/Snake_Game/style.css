@@ -60,7 +60,7 @@ body{
     text-align: center;
     font-size: 1.3rem;
     color: #b8c6dc;
-    width: calc(100% / 4);
+    width: calc(98% / 4); /* 100% / 4 */
     cursor: pointer;
     border-right: 1px solid #171b26;
 }
