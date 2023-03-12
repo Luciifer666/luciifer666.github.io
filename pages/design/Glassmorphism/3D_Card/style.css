@@ -1,0 +1,121 @@
+:root {
+    --theme-color-1: #0084ff;
+    --theme-color-2: #1c53df;
+    --bg-color: #000422;
+    --white-shade-1: #ffffff;
+    --white-shade-2: #d0d0d0;
+    --white-rgba: rgba(255, 255, 255, 0.12);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+.container{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    left: 50%;
+    perspective: 800px;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    height: 280px;
+    width: 280px;
+    background: radial-gradient(var(--theme-color-1), var(--theme-color-2));
+    border-radius: 50%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card{
+    height: 380px;
+    width: 350px;
+    position: relative;
+}
+
+.front, .back{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    background-color: var(--white-rgba);
+    border: 2px solid var(--white-rgba);
+    backdrop-filter: blur(8px);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: 1s;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.front{
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.front img{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    border: 10px solid var(--white-rgba);
+}
+
+.details{
+    text-align: center;
+}
+
+h2{
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--white-shade-1);
+}
+
+span{
+    font-size: 14px;
+    color: var(--white-shade-2);
+}
+
+.back{
+    justify-content: space-around;
+    transform: rotateY(180deg);
+}
+
+.icon{
+    display: grid;
+    place-items: center;
+    height: 65px;
+    width: 65px;
+    background-color: var(--white-rgba);
+    font-size: 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--white-shade-1);
+}
+
+.icon:hover{
+    transform: translateY(-10px);
+    background-color: var(--white-shade-1);
+    color: var(--theme-color-1);
+}
+
+.card:hover .back{
+    transform: rotateY(0deg);
+}
+
+.card:hover .front{
+    transform: rotateY(-180deg);
+}
