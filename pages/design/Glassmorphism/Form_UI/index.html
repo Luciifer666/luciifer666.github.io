@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form UI</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <form>
+            <h3>Welcome back !
+                <span>Login to your account.</span>
+            </h3>
+            <label for="username">Username</label>
+            <input type="text" placeholder="example : Lucifer" id="username">
+            
+            <label for="password">Password</label>
+            <input type="password" placeholder="Minimum 6 characters" id="password" onkeyup="countCharacter()">
+            <p id="error"><i class="fa-solid fa-exclamation"></i> too short</p>
+
+            <button>Sign In</button>
+        </form>
+
+        <script src="script.js"></script>
+    </body>
+</html>

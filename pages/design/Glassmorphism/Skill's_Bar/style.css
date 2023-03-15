@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #050510;
+}
+
+.wrapper{
+    width: 40%;
+    min-width: 500px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.container{
+    width: 100%;
+    padding: 50px 30px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 2px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.shape-1{
+    height: 220px;
+    width: 220px;
+    background: linear-gradient(#ff0e72, #fff6a6);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    left: -80px;
+    z-index: -1;
+}
+
+.shape-2{
+    height: 180px;
+    width: 180px;
+    background: linear-gradient(#3da50e, #325ea5);
+    border-radius: 50%;
+    position: absolute;
+    top: -100px;
+    right: -50px;
+    z-index: -1;
+}
+
+.container *{
+    color: #ffffff;
+    font-weight: 500;
+}
+
+h2{
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.skills:not(:last-child){
+    margin-bottom: 30px;
+}
+
+.details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bar{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 7px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.bar div{
+    position: relative;
+    width: 0;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #badefc;
+    border: 1px solid #1c97fc;
+    box-shadow: 0 0 5px rgba(28, 151, 252, 0.6);
+}
+
+#html-bar{
+    animation: html-fill 2s forwards;
+}
+
+@keyframes html-fill{
+    100%{
+        width: 90%;
+    }
+}
+
+#css-bar{
+    animation: css-fill 2s forwards;
+}
+
+@keyframes css-fill{
+    100%{
+        width: 75%;
+    }
+}
+
+#js-bar{
+    animation: js-fill 2s forwards;
+}
+
+@keyframes js-fill {
+    100%{
+        width: 82%;
+    }
+}
+
+#jQuery-bar{
+    animation: jQuery-fill 2s forwards;
+}
+
+@keyframes jQuery-fill{
+    100%{
+        width: 68%;
+    }
+}
