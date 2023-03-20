@@ -8,7 +8,7 @@ let currentPlayer = "CROSS";
 let winStatus = false;
 
 turn.style.display = "block";
-turn.innerText = `C'est à votre tour !`;
+turn.innerText = `It's your turn !`;
 
 function areEqual(one, two) {
     if (one === two) return one;
@@ -93,7 +93,7 @@ function handleBoxClick(e) {
     let len = checkList.filter(Boolean).length;
     const boxNum = parseInt(e.target.getAttribute("data-box-num"));
     let boxNumForBot;
-    let msg = "Le bot est en cours de réflexion";
+    let msg = "The bot is under consideration";
 
     turn.style.display = "block";
 
@@ -107,6 +107,7 @@ function handleBoxClick(e) {
             while (len < 9) {
                 boxNumForBot = Math.floor(Math.random() * 9);
                 if (!checkList[boxNumForBot]) {
+                    turn.style.display = "block";
                     turn.innerText = msg;
                     const intervalID = setInterval(() => {
                         msg += ".";
@@ -115,9 +116,9 @@ function handleBoxClick(e) {
                     setTimeout(() => {
                         clearInterval(intervalID);
                         boxClick(allBox[boxNumForBot], "ZERO", boxNumForBot);
-                        turn.innerText = "C'est à votre tour"
+                        turn.innerText = "It's your turn";
+                        checkWin(len);
                     }, 4000);
-                    checkWin(len);
                     break;
                 }
             }
@@ -132,7 +133,7 @@ restartBtn.addEventListener("click", function () {
     checkList.length = 0;
     currentPlayer = "CROSS";
     turn.style.display = "block";
-    turn.innerText = `C'est à votre tour pour recommencer une partie !`;
+    turn.innerText = `It's your turn to start a new game !`;
     resultContainer.innerText = "";
     winStatus = false;
 });

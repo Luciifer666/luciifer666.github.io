@@ -7,7 +7,7 @@ const checkList = [];
 let currentPlayer = "CROSS";
 let winStatus = false;
 
-turn.innerText = `C'est au tour de ${currentPlayer} pour commencer !`;
+turn.innerText = `It's ${currentPlayer}'s turn to start !`;
 
 function areEqual(one, two) {
     if (one === two) return one;
@@ -78,6 +78,7 @@ function checkWin(len) {
             resultContainer.innerText = "O Won the Match.";
         }
     } else if (len == 8) {
+        turn.style.display = "none";
         winStatus = true;
         resultContainer.innerText = "= Match Draw.";
     }
@@ -96,16 +97,14 @@ function handleBoxClick(e) {
     const len = checkList.filter(Boolean).length;
     const boxNum = parseInt(e.target.getAttribute("data-box-num"));
 
-    turn.style.display = "block";
-
     if (!winStatus && !checkList[boxNum]) {
         if (len > 0 && currentPlayer == "CROSS") {
             boxClick(e,'ZERO',boxNum);
-            turn.innerText = `C'est au tour de CROSS`;
+            turn.innerText = `It's CROSS' turn`;
             turn.style.color = "#222222";
         } else {
             boxClick(e,'CROSS',boxNum);
-            turn.innerText = `C'est au tour de ZERO`;
+            turn.innerText = `It's ZERO's turn`;
             turn.style.color = "#3393ff";
         }
 
@@ -120,7 +119,7 @@ restartBtn.addEventListener('click',function(){
     checkList.length = 0;
     currentPlayer = 'CROSS';
     turn.style.display = "block";
-    turn.innerText = `C'est au tour de ${currentPlayer} pour recommencer une partie !`;
+    turn.innerText = `It's ${currentPlayer}'s turn to start a new game !`;
     turn.style.color = "#222222"
     resultContainer.innerText = '';
     winStatus = false;
