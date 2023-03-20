@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tic-Tac-Toe (2 players)</title>
+        <link rel="stylesheet" href="../css/game.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;900&family=Monoton&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <a href="../../main.html" class="home-button">Home</a>
+
+        <div class="container">
+            <h1>Tic Tac Toe</h1>
+            <div class="state">
+                <button id="restart">↻ Restart</button>
+                <p id="result"></p>
+            </div>
+            <div class="game-container">
+                <div class="wrap">
+                    <section class="box" data-box-num="0"></section>
+                    <section class="box" data-box-num="1"></section>
+                    <section class="box" data-box-num="2"></section>
+                    <section class="box" data-box-num="3"></section>
+                    <section class="box" data-box-num="4"></section>
+                    <section class="box" data-box-num="5"></section>
+                    <section class="box" data-box-num="6"></section>
+                    <section class="box" data-box-num="7"></section>
+                    <section class="box" data-box-num="8"></section>
+                </div>
+            </div>
+            <p class="text" id="text">Aucun tour en cours</p>
+        </div>
+
+        <script src="../js/two-players.js"></script>
+    </body>
+</html>
