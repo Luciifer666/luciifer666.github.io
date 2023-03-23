@@ -1,0 +1,74 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    background: #e7e9f5;
+}
+.box{
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0, 0.1);
+}
+.box .icon{
+    position: relative;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 8px;
+    border: 2px solid #e7e9f5;
+    transition: all 0.5s ease;
+}
+.icon i{
+    position: absolute;
+    font-size: 30px;
+    left: 50%;
+    top: 50%;
+    color: #242424;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+.icon.active i{
+    color: #ffffff;
+}
+.icon i.close{
+    opacity: 0;
+}
+.icon.active i.close{
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(360deg);
+}
+.icon.active i.open{
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+.icon.line.active i.close{
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+.icon.line.active i.open{
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+.box .icon.red.active{
+    background: #dd284f;
+}
+.box .icon.green.active{
+    background: #28dd93;
+}
+.box .icon.border-red.active{
+    border: 2px solid #dd284f;
+}
+.box .icon.border-red.active i{
+    color: #dd284f;
+}
+.box .icon.border-green.active{
+    border: 2px solid #28dd50;
+}
+.box .icon.border-green.active i{
+    color: #28dd93;
+}
