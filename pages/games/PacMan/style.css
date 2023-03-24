@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p.high-score{
+    font-family: 'VT323';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    margin-top: 50px;
+    left: 0;
+    right: 50px;
+    top: 175px;
+}

@@ -2,11 +2,15 @@ const canvas = document.getElementById("canvas");
 const canvasContext = canvas.getContext("2d");
 const pacmanFrames = document.getElementById("animation");
 const ghostFrames = document.getElementById("ghosts");
+const highScoreElement = document.getElementById('high-score');
 
 let createRect = (x, y, width, height, color) => {
     canvasContext.fillStyle = color;
     canvasContext.fillRect(x, y, width, height);
 };
+
+let highScore = localStorage.getItem('high-score') || 0;
+highScoreElement.innerHTML = `High score : ${highScore}`;
 
 const DIRECTION_RIGHT = 4;
 const DIRECTION_UP = 3;
@@ -134,10 +138,15 @@ let update = () => {
         console.log("hit");
         onGhostCollision();
     };
+
     if(score >= foodCount) {
         drawWin();
         clearInterval(gameInterval);
     };
+
+    highScore = score >= highScore ? score : highScore;
+    localStorage.setItem("high-score", highScore);
+    highScoreElement.innerHTML = `High Score : ${highScore}`;
 };
 
 let drawFoods = () => {
@@ -184,6 +193,7 @@ let drawScore = () => {
         0,
         oneBlockSize * (map.length + 1)
     );
+    
 };
 
 let draw = () => {
