@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OTP Verification</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header></header>
+            <h4>Enter OTP</h4>
+            <p>We have sent you an access code via SMS for the mobile number verification. Please check</p>
+            <form action="#">
+                <div class="input-field">
+                    <input type="number" />
+                    <input type="number" disabled />
+                    <input type="number" disabled />
+                    <input type="number" disabled />
+                </div>
+                <button>Verify</button>
+            </form>
+            <p id="text">Didn't receive the code ? <br><a href="#" id="resend">Resend a code</a></p>
+            <p class="receiving" id="receiving">Message sent ! Check your SMS</p>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
