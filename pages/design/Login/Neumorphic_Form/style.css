@@ -1,0 +1,117 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ececec;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #202035;
+    letter-spacing: 1.2px;
+}
+
+form{
+    width: 350px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.55),
+                10px 10px 15px rgba(70, 70, 70, 0.12);
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+h6{
+    margin-bottom: 10px;
+    font: inherit;
+    text-transform: uppercase;
+}
+
+a.submit{
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.55),
+                10px 10px 15px rgba(70, 70, 70, 0.12);
+    transition: 0.5s ease;
+}
+
+a.submit:hover{
+    transform: scale(0.93);
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    margin-bottom: 25px;
+    border: none;
+    background-color: transparent;
+    box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.55),
+                10px 10px 15px rgba(70, 70, 70, 0.12);
+    padding: 10px;
+    width: 90%;
+    border-radius: 7px;
+    outline: none;
+}
+
+::placeholder{
+    font-size: 12px;
+    font-weight: 500;
+    color: #ababab;
+    letter-spacing: 1.3px;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    height: 40px;
+    width: 120px;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.55),
+                10px 10px 15px rgba(70, 70, 70, 0.12);
+    border: 5px solid #ececec;
+    margin-right: 30px;
+    border-radius: 30px;
+    font: inherit;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="radio"]::after{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    color: #606060;
+    letter-spacing: 0.5px;
+}
+
+#developer::after{
+    content: 'Developer';
+}
+
+#designer::after{
+    content: 'Designer';
+}
+
+input[type="radio"]:checked, a:active{
+    box-shadow:  -10px -10px 15px rgba(255,255,255,0.55),
+                10px 10px 15px rgba(70,70,70,0.12),
+                inset -10px -10px 15px rgba(255,255,255,0.55),
+                inset 10px 10px 15px rgba(70,70,70,0.12);
+    transition: 0.5s ease;
+}
+
+input[type="radio"]:checked::after{
+    color: #15e38a;
+    transition: 0.5s ease;
+}
