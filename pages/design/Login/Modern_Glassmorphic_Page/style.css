@@ -1,0 +1,193 @@
+:root{
+    --morphic-color: rgba(16 18 27 / 50%);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, #fc466b, #3f5efb);
+    background-size: 150%, 150%;
+    animation: background-image-animation 15s ease infinite;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+.container{
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    padding-top: 50px;
+}
+
+form{
+    position: relative;
+    background-color: var(--morphic-color);
+    padding: 0 3em 2em;
+    border-radius: 20px;
+    border-left: 1px solid var(--morphic-color);
+    border-top: 1px solid var(--morphic-color);
+    backdrop-filter: blur(20px);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+form h2{
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #957dad,
+                 1px 2px 1px #957dad,
+                 1px 3px 1px #957dad,
+                 1px 4px 1px #957dad,
+                 1px 5px 1px #957dad,
+                 1px 6px 1px #957dad,
+                 1px 10px 5px rgba(16, 16, 16, 0.5),
+                 1px 15px 10px rgba(16, 16, 16, 0.3),
+                 1px 20px 30px rgba(16, 16, 16, 0.3),
+                 1px 25px 50px rgba(16, 16, 16, 0.5);
+    letter-spacing: 3px;
+}
+
+.inputs-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    width: 200px;
+    padding: 1em;
+    margin-bottom: 2em;
+    background: transparent;
+    border: none;
+    border-left: 1px solid var(--morphic-color);
+    border-top: 1px solid var(--morphic-color);
+    border-radius: 1em;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="email"]:focus, input[type="password"]:focus{
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"] {
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 0 2.5rem;
+    width: 150px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:active{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+input::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(133, 119, 114, 78%);
+}
+
+form a{
+    margin-top: 40px;
+    display: block;
+    text-decoration: none;
+    color: #dddddd;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+.autorization-variants{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.autorization-variants a{
+    margin: 0;
+    font-size: 16px;
+}
+
+.autorization-variants a:hover{
+    color: var(--morphic-color);
+}
+
+form a:hover{
+    color: rgba(16, 18, 27, 90%);
+    text-shadow: 2px 2px 6px #00000040;
+}
+
+form a:active{
+    text-shadow: none;
+}
+
+form a, form a:focus{
+    outline: none;
+}
+
+.element {
+    position: absolute;
+    background-color: var(--morphic-color);
+    backdrop-filter: blur(20px);
+    border-radius: 1em;
+    border-left: 1px solid var(--morphic-color);
+    border-top: 1px solid var(--morphic-color);
+    transition: all 0.2s ease;
+}
+
+.element-1{
+    height: 80px;
+    width: 80px;
+    top: 80px;
+    left: -40px;
+    z-index: -1;
+}
+
+.element-2{
+    height: 80px;
+    width: 80px;
+    bottom: -30px;
+    right: -10px;
+}
+
+.element-3{
+    height: 100px;
+    width: 100px;
+    top: 150px;
+    right: -50px;
+    z-index: -1;
+}
+
+.element-4{
+    height: 60px;
+    width: 60px;
+    bottom: 80px;
+    left: -40px;
+}
+
+/* Animation */
+
+@keyframes background-image-animation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}

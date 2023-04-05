@@ -9,7 +9,7 @@ let createRect = (x, y, width, height, color) => {
     canvasContext.fillRect(x, y, width, height);
 };
 
-let highScore = localStorage.getItem('high-score') || 0;
+let highScore = localStorage.getItem('PacMan_High-Score') || 0;
 highScoreElement.innerHTML = `High score : ${highScore}`;
 
 const DIRECTION_RIGHT = 4;
@@ -145,7 +145,7 @@ let update = () => {
     };
 
     highScore = score >= highScore ? score : highScore;
-    localStorage.setItem("high-score", highScore);
+    localStorage.setItem("PacMan_High-Score", highScore);
     highScoreElement.innerHTML = `High Score : ${highScore}`;
 };
 

@@ -15,7 +15,7 @@ let score = 0;
 
 //get high score from local storage
 
-let highScore = localStorage.getItem("high-score") || 0;
+let highScore = localStorage.getItem("Snake_High-Score") || 0;
 highScoreElement.innerHTML = `High Score : ${highScore}`;
 
 const updateFoodPosition = () => {
@@ -95,7 +95,7 @@ const initGame = () => {
         score++;
         highScore = score >= highScore ? score : highScore; //if score > high score => high score = score
         
-        localStorage.setItem("high-score", highScore);
+        localStorage.setItem("Snake_High-Score", highScore);
         scoreElement.innerHTML = `Score : ${score}`;
         highScoreElement.innerHTML = `High Score : ${highScore}`;
     };
