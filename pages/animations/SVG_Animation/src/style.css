@@ -1,0 +1,16 @@
+body{
+    background: linear-gradient(to right, #1c1c1c, #000000);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+svg > *{
+    stroke: none;
+}
+
+p{
+    display: none;
+}
