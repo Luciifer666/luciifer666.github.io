@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mathflix | Action</title>
+        <link rel="stylesheet" href="categories.css">
+    </head>
+    <body>
+        <a href="../selection.html" class="home-button">Home</a>
+        <header class="header">
+            <h1 class="title">Select your serie/film<br>in the action category !</h1>
+        </header>
+        <main class="main">
+            <div class="button-container">
+                <button class="button" id="number1">Revenge of Math</button>
+                <button class="button" id="number2">Math Hard</button>
+                <button class="button" id="number3">Breaking Maths</button>
+                <button class="button" id="number4">Father's Plan</button>
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p id="synopsis">Here will be the Synopsis of the movie you clicked on. (otherwise, it's kinda bad...)</p>
+                </div>
+              </div>
+          </main>
+
+        <!-- Add the toggle -->
+        <label class="toggle">
+            <input type="checkbox" id="language-toggle">
+            <span class="slider"></span>
+            <p id="language">English</p>
+        </label>
+
+
+          <script src="script.js"></script>
+    </body>
+</html>

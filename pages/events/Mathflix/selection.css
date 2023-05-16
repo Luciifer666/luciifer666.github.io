@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('fonts/BebasNeue.otf');
+}
+
+body {
+	background-color: #141414;
+	color: #fff;
+	font-family: 'BebasNeue', sans-serif;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* changed from center */
+  height: 30%; /* changed from 20% */
+}
+
+.title {
+  text-align: center;
+  color: #e50914;
+  font-size: 46px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-shadow: 0px 2px 5px rgba(255, 255, 255, 0.2);
+  margin: 0;
+  margin-bottom: 50px; /* added margin to move title lower */
+  justify-content: flex-end; /* added to align with header */
+  transform: skew(-20deg); /* curved effect*/
+}
+
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 50%;
+}
+
+.button-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.button {
+  font-family: 'BebasNeue', sans-serif;
+	background-color: transparent;
+	color: #fff;
+	font-size: 25px;
+	padding: 20px 50px;
+	margin: 10px;
+	border: 2px solid #fff;
+	border-radius: 50px;
+	box-shadow: 0px 5px 15px rgba(255,255,255,0.1);
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.button:hover {
+	background-color: #fff;
+	color: #1e1e1e;
+	cursor: pointer;
+	box-shadow: 0px 5px 15px rgba(255,255,255,0.3);
+	transform: translateY(-5px);
+}
+
+a.home-button {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.home-button:hover {
+    background: linear-gradient(to right, #ff0000, #9c0000);
+    color: white;
+    box-shadow: 0px 0px 20px 0px #e6e6e6;
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+a.home-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 3px white;
+}
