@@ -13,6 +13,12 @@ links.forEach(link => {
     } else if(this.href === "https://luciifer666.github.io/categories/second/glassmorphism.html") {
       alert("Glassmorphism is Glassmorphism is the latest user interface design principle (glass effects into the look)")
       confirmation = confirm("Do you want to go to the page of the Glassmorphism ?");
+    } else if(this.href.startsWith("https://luciifer666.github.io/pages/events")) {
+
+    if(detectMobile()) {
+      alert("the events you will see only have a PC version: you are a mobile user, we strongly advise you to switch your browser to PC format via its tab settings.");      
+    };
+      confirmation = confirm("Would you like to go to access to the page ?");
     } else {
       confirmation = confirm(`Do you really want to be redirected to ${this.text} ? (${this.href.replace("https://luciifer666.github.io/pages/", "")})`);
     }
@@ -21,3 +27,19 @@ links.forEach(link => {
     }
   });
 });
+
+function detectMobile() {
+  const toMatch = [
+    /Android/i,
+    /webOS/i,
+    /iPhone/i,
+    /iPad/i,
+    /iPod/i,
+    /BlackBerry/i,
+    /Windows Phone/i
+  ];
+
+  return toMatch.some((toMatchItem) => {
+    return navigator.userAgent.match(toMatchItem);
+  });
+};
