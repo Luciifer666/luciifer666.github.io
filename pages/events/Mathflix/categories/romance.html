@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mathflix | Romance</title>
+        <link rel="stylesheet" href="categories.css">
+    </head>
+    <body>
+        <a href="../selection.html" class="home-button">&laquo;</a>
+        <header class="header">
+            <h1 class="title">Select your serie/film<br>in the romance category !</h1>
+        </header>
+        <main class="main">
+            <div class="button-container">
+                <div class="row">
+                    <button class="button">The end is Near</button>
+                    <button class="button">The Impossible Love Equation</button>
+                    <button class="button">Math Lovers</button>
+                </div>
+                <div class="row">
+                    <button class="button">The Beauty and the Beast (revisited version)</button>
+                    <button class="button">Love or Math</button>
+                </div>
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p id="synopsis">Here will be the Synopsis of the movie you clicked on. (otherwise, it's kinda bad...)</p>
+                </div>
+              </div>
+          </main>
+
+        <!-- Add the toggle -->
+        <label class="toggle">
+            <input type="checkbox" id="language-toggle">
+            <span class="slider"></span>
+            <p id="language">English</p>
+        </label>
+
+
+          <script src="script.js"></script>
+    </body>
+</html>

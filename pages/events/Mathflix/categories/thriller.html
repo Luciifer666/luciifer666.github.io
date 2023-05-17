@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mathflix | Thriller</title>
+        <link rel="stylesheet" href="categories.css">
+    </head>
+    <body>
+        <a href="../selection.html" class="home-button">&laquo;</a>
+        <header class="header">
+            <h1 class="title">Select your serie/film<br>in the thriller category !</h1>
+        </header>
+        <main class="main">
+            <div class="button-container">
+                <div class="row">
+                    <button class="button">Ka To Sukeban</button>
+                    <button class="button">5 less 1</button>
+                    <button class="button">Puzzle</button>
+                </div>
+                <div class="row">
+                    <button class="button">One of us is lying</button>
+                    <button class="button">The Math Solver</button>
+                    <button class="button">The Class</button>
+                </div>
+                <div class="row">
+                    <button class="button">Espace Maths</button>
+                    <button class="button">The Hacker's Game</button>
+                    <button class="button">The detectives</button>
+                </div>
+                <div class="row">
+                    <button class="button">How to get away with operations</button>
+                    <button class="button">The Test</button>
+                </div>
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p id="synopsis">Here will be the Synopsis of the movie you clicked on. (otherwise, it's kinda bad...)</p>
+                </div>
+              </div>
+          </main>
+
+        <!-- Add the toggle -->
+        <label class="toggle">
+            <input type="checkbox" id="language-toggle">
+            <span class="slider"></span>
+            <p id="language">English</p>
+        </label>
+
+
+          <script src="script.js"></script>
+    </body>
+</html>
