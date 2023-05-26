@@ -13,6 +13,8 @@ links.forEach(link => {
     } else if(this.href === "https://luciifer666.github.io/categories/second/glassmorphism.html") {
       alert("Glassmorphism is Glassmorphism is the latest user interface design principle (glass effects into the look)")
       confirmation = confirm("Do you want to go to the page of the Glassmorphism ?");
+    } else if(this.href === "https://luciifer666.github.io/categories/fourth/user_interface.html") {
+      confirmation = confirm("Do you want to go to the page of the UI ?");
     } else if(this.href.startsWith("https://luciifer666.github.io/pages/events")) {
 
     // if(detectMobile()) {
