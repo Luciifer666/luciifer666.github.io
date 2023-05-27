@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #000;
+}
+
+#parallax{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+#parallax .layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#parallax .layer.bg{
+    background: url(assets/bg.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#parallax .layer.overlay{
+    background: url(assets/overlay.png);
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#parallax .layer.assassins{
+    top: 140px;
+    background: url(assets/assassins.png);
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#parallax .layer.bottom{
+    background: url(assets/bottom.png);
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section{
+    padding: 0 100px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+section img{
+    max-width: 500px;
+}
+
+section p{
+    font-size: 14px;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+}
