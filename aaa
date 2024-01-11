@@ -1,39 +1,11 @@
-def infix_to_npi(expression):
-    def get_precedence(operator):
-        precedence = {'+': 1, '-': 1, '*': 2, '/': 2}
-        return precedence.get(operator, 0)
-
-    def is_operator(char):
-        return char in "+-*/"
-
-    def infix_to_postfix(infix):
-        stack = []
-        postfix = []
-        for token in infix:
-            if token.isdigit() or (token[0] == '-' and token[1:].isdigit()):
-                postfix.append(token)
-            elif is_operator(token):
-                while stack and is_operator(stack[-1]) and get_precedence(stack[-1]) >= get_precedence(token):
-                    postfix.append(stack.pop())
-                stack.append(token)
-            elif token == '(':
-                stack.append(token)
-            elif token == ')':
-                while stack and stack[-1] != '(':
-                    postfix.append(stack.pop())
-                stack.pop()  # Discard the '('
-
-        while stack:
-            postfix.append(stack.pop())
-
-        return postfix
-
-    infix_tokens = expression.replace('(', ' ( ').replace(')', ' ) ').split()
-    postfix_tokens = infix_to_postfix(infix_tokens)
-    return ' '.join(postfix_tokens)
-
-# Exemple d'utilisation
-expression_infixe = "(1 + 2) * 3 - 4"
-expression_npi = infix_to_npi(expression_infixe)
-print("Expression infixée:", expression_infixe)
-print("Expression NPI:", expression_npi)
+lab1=  [[1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1],
+        [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+        [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+        [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+        [2, 0, 1, 0, 1, 0, 1, 0, 1, 0, 3],
+        [1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1],
+        [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1],
+        [1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1],
+        [1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1]]
