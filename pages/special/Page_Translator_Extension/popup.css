@@ -1,0 +1,72 @@
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Changement de police pour plus de modernité */
+    background-color: #131313; /* Fond doux et moderne */
+    padding: 20px;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px; /* Coins arrondis pour un effet moderne */
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #e4e4e4;
+    margin: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e6e6e6; /* Légère bordure sous le titre */
+}
+
+label {
+    font-size: 14px;
+    color: #e4e4e4;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #4caf50; /* Changement de couleur de la bordure sur focus */
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background: linear-gradient(135deg, #ff7b7b, #ff61a6, #6e2fc7); /* Dégradé violet-rose-orange */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff5c5c, #ff3f8f, #5808b6); /* Dégradé plus saturé sur hover */
+}
+
+button:active {
+    transform: translateY(2px); /* Effet de clic léger */
+}
+
+button:focus {
+    outline: none;
+}

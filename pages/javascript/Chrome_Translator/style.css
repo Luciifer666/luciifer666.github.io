@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212; /* Fond sombre */
+    color: #e0e0e0; /* Texte clair pour contraster */
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto; /* Centrage du contenu */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ddd; /* Couleur plus claire pour les labels */
+}
+
+textarea, select, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #444; /* Bordure plus discrète sur fond sombre */
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #333; /* Fond sombre pour les champs */
+    color: #f0f0f0; /* Texte clair sur fond sombre */
+}
+
+textarea {
+    resize: none;
+    min-height: 120px;
+    max-height: 150px;
+}
+
+select {
+    cursor: pointer;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#outputText {
+    background-color: #1a1a1a; /* Gris clair pour la zone vide */
+    min-height: 80px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 13px;
+    white-space: pre-wrap;
+    color: #888; /* Texte gris pour indiquer qu'il n'y a pas encore de traduction */
+    cursor: not-allowed; /* Icône de blocage au survol */
+    transition: all 0.3s ease;
+}
+
+#outputText:hover {
+    cursor: not-allowed; /* Garde l'icône "bloquer" même au survol */
+}
+
+#outputText:not(:empty) {
+    background-color: #333; /* Change la couleur de fond une fois qu'il y a du texte */
+    color: white; /* Change la couleur du texte une fois qu'il y a du texte */
+    cursor: text; /* Restaure l'icône de texte normal quand il y a du contenu */
+}
+
+textarea:focus, select:focus, button:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+select {
+    background-color: #222; /* Fond plus foncé pour les sélecteurs */
+}
+
+/* Style du bouton d'information */
+.info-btn {
+    background-color: #007bff; /* Bleu clair et informatif */
+    color: white; /* Couleur du texte */
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    transition: background-color 0.3s, transform 0.2s;
+    
+    position: fixed; /* Fixé par rapport à la fenêtre */
+    top: 20px; /* Espace de 20px depuis le haut */
+    left: 20px; /* Espace de 20px depuis la gauche */
+}
+
+.info-btn:hover {
+    background-color: #0056b3; /* Un bleu un peu plus foncé au survol */
+    transform: scale(1.1); /* Légère augmentation de la taille au survol */
+}
+
+
+/* Style de la modale (fenêtre d'information) */
+.modal {
+    display: none; /* Cachée par défaut */
+    position: fixed;
+    z-index: 1; /* Au-dessus du contenu */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+    overflow: auto;
+    padding-top: 60px;
+}
+
+/* Contenu de la modale */
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largeur de la fenêtre */
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+/* Bouton de fermeture de la modale */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

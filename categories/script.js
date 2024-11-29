@@ -12,31 +12,31 @@ links.forEach(link => {
   link.addEventListener("click", function(event) {
 
     if(this.href === "https://luciifer666.github.io/index.html") {
-      confirmation = confirm(`Do you want to be redirected to the Home menu ?`);
-    } else if(this.href === "https://luciifer666.github.io/categories/first/cubes.html") {
-      confirmation = confirm("Do you want to go on the light cubes page ?");
-    } else if(this.href === "https://luciifer666.github.io/categories/second/login.html") {
-      confirmation = confirm("Do you want to go on the Animated Login page ?");
-    } else if(this.href === "https://luciifer666.github.io/categories/second/glassmorphism.html") {
+      confirmation = confirm(`Do you wanna be redirected to the Home menu ?`);
+    } else if(this.href === "https://luciifer666.github.io/categories/animations/cubes.html") {
+      confirmation = confirm("Do you wanna go on the light cubes page ?");
+    } else if(this.href === "https://luciifer666.github.io/categories/design/login.html") {
+      confirmation = confirm("Do you wanna go on the Animated Login page ?");
+    } else if(this.href === "https://luciifer666.github.io/categories/design/glassmorphism.html") {
       alert("Glassmorphism is the latest user interface design principle (glass effects into the look)")
-      confirmation = confirm("Do you want to go on the Glassmorphism page ?");
-    } else if(this.href === "https://luciifer666.github.io/categories/second/parallax.html") {
+      confirmation = confirm("Do you wanna go on the Glassmorphism page ?");
+    } else if(this.href === "https://luciifer666.github.io/categories/design/parallax.html") {
       alert("Parallax refers to the apparent shift or difference in the position of an object when viewed from different perspectives")
-      confirmation = confirm("Do you want to go on the Parallax page ?")
-    } else if(this.href === "https://luciifer666.github.io/categories/fourth/user_interface.html") {
-      confirmation = confirm("Do you want to go on the UI page ?");
-    } else if(this.href.startsWith("https://luciifer666.github.io/pages/events")) {
+      confirmation = confirm("Do you wanna go on the Parallax page ?")
+    } else if(this.href === "https://luciifer666.github.io/categories/javascript/user_interface.html") {
+      confirmation = confirm("Do you wanna go on the UI page ?");
+    } else if(this.href.startsWith("https://luciifer666.github.io/pages/special")) {
 
     // if(detectMobile()) {
     //   alert("the events you will see only have a PC version: you are a mobile user, we strongly advise you to switch your browser to PC format via its tab settings.");      
     // };
-      confirmation = confirm("Would you like to go to access to the page ?");
+      confirmation = confirm("Would you like to go to access to the events pagoe ?");
     } else {
-      confirmation = confirm(`Do you really want to be redirected to ${this.text} ? (${this.href.replace("https://luciifer666.github.io/pages/", "")})`);
+      confirmation = confirm(`Do you wanna be redirected to ${this.text} ?`); //(${this.href.replace("https://luciifer666.github.io/pages/", "")})
     }
     if (!confirmation) {
       event.preventDefault();
-    }
+    };
   });
 });
 

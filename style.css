@@ -1,24 +1,31 @@
+/* Global settings */
 body {
-  background-color: #f7f7f7;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  color: #333;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #e0e0e0;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
+/* Title style */
 h1 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #4285f4;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4caf50; /* ChatGPT style accent */
   margin-top: 50px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Paragraph style */
 p {
-  font-size: 14px;
+  font-size: 1.1rem;
   margin: 20px 0;
-  color: #333;
+  color: #cfcfcf;
 }
 
+/* List container */
 ul {
   display: inline-block;
   list-style-type: none;
@@ -26,31 +33,45 @@ ul {
   padding: 0;
 }
 
+/* List items */
 li {
   display: inline-block;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 5px;
-  transition: all 0.2s ease-in-out;
+  background: linear-gradient(135deg, #313356, #41446b);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 25px;
+  margin: 0 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 li:hover {
-  background-color: #4285f4;
+  background: linear-gradient(135deg, #4caf50, #6fbf73);
   color: #fff;
   cursor: pointer;
-  transform: scale(1.1);
-  /* border: none; */
-  box-shadow: 2px 2px 5px #888;
-  /* text-shadow: 1px 1px #333; */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
 }
 
-li:active{
-  transform: scale(1);
+li:active {
+  transform: translateY(0);
 }
 
+/* Links */
 a {
   text-decoration: none;
-  color: #333;
+  color: inherit;
+  font-weight: bold;
+}
+
+/* Responsive font adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  li {
+    padding: 10px 15px;
+    margin: 0 10px;
+  }
 }
