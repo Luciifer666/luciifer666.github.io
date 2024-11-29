@@ -70,3 +70,11 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+document.getElementById('infoLink').addEventListener('click', function(event) {
+    event.preventDefault();  // Empêche l'action par défaut du lien
+    const link = document.createElement('a');
+    link.href = './Chrome Translator.zip';  // Chemin vers ton fichier ZIP
+    link.download = 'Chrome Translator Extension.zip';  // Nom du fichier lors du téléchargement
+    link.click();  // Lance le téléchargement
+});
